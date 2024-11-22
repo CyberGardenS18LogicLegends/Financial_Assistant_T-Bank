@@ -1,22 +1,19 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.ksp)
     alias(libs.plugins.daggerHilt)
 }
 
 android {
-    namespace = "com.t_bank.financial_assistant"
+    namespace = "com.t_bank.data"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.t_bank.financial_assistant"
         minSdk = 28
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -39,27 +36,21 @@ android {
 
 dependencies {
 
-    implementation(project(":data"))
-
     implementation(libs.bundles.hilt)
     ksp(libs.hilt.compiler)
 
-    implementation(libs.bundles.glide)
+    implementation(libs.bundles.room)
+    ksp(libs.room.compiler)
+
+    implementation(libs.bundles.retrofit)
 
     implementation(libs.bundles.coroutines)
 
-    implementation(libs.splash.api)
-
-    implementation(libs.biometric)
-    implementation(libs.androidx.navigation.ui.ktx)
-    implementation(libs.navigation.fragment.ktx)
-    implementation(libs.circularprogressbar)
+    implementation(libs.bundles.security)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

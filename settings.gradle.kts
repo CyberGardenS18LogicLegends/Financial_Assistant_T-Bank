@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Financial Assistant T-Bank"
 include(":app")
+include(":data")
