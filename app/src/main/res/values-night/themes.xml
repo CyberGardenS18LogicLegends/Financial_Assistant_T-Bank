@@ -1,7 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.FinancialAssistantTBank" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.FinancialAssistantTBank" parent="Theme.Material3.Light.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+    </style>
+
+    <style name="Theme.FinancialAssistantTBank" parent="Base.Theme.FinancialAssistantTBank" />
+
+    <style name="Theme.App.SplashTheme" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/backgroundColor</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <!--<item name="windowSplashScreenBackground">#FFFDB601</item>-->
+        <!--<item name="windowSplashScreenAnimationDuration">1000</item>-->
+        <item name="postSplashScreenTheme">@style/Theme.FinancialAssistantTBank</item>
     </style>
 </resources>

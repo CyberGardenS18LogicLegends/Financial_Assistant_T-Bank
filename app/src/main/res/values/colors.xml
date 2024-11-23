@@ -2,4 +2,20 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#FFFFDD2D</color>
+
+
+    <!-- Цвета для текста -->
+    <color name="textColorPrimary">#FFF5F7FA</color>
+    <color name="textColorSecondary">#FF333333</color>
+    <color name="textColorHint">#FFACACAE</color>
+
+
+    <color name="backgroundColor">#FF111111</color> <!-- основной фон -->
+    <color name="backgroundSecondary">#FF333333</color> <!-- фон поля ввода -->
+    <!--<color name="backgroundOverlay">#14000000</color>
+    <color name="backgroundOverlayLight">#0d000000</color>
+    <color name="backgroundOverlayExtraLight">#08000000</color>-->
+
 </resources>

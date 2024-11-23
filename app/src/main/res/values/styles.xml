@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- TextAppearanceStyles -->
+
+    <!--Monserrat-->
+
+
+    <!-- Monserrat.SemiBold -->
+    <style name="TextAppearance.Monserrat.SemiBold.W600.Sp17" parent="">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/textColorSecondary</item>
+    </style>
+
+    <style name="TextAppearance.Monserrat.SemiBold.W600.Sp15" parent="">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <!-- Monserrat.Medium -->
+    <style name="TextAppearance.Monserrat.Medium.W500.Sp25" parent="">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Monserrat.Medium.W500.Sp17" parent="">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Monserrat.Medium.W500.Sp15" parent="">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Monserrat.Medium.W500.Sp13" parent="">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/textColorHint</item>
+    </style>
+
+
+
+    <!-- Comme -->
+
+    <!-- Comme.Bold -->
+    <style name="TextAppearance.Comme.Bold.W600.Sp20" parent="">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <!-- InputLayoutStyles -->
+    <style name="TextInputLayoutRounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name_ru">ФИНАНС</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="registration">Регистрация</string>
+    <string name="authentication">Войти в аккаунт</string>
+    <string name="repeat_password">Повторите пароль</string>
+    <string name="register">Зарегистрироваться</string>
+    <string name="or">или</string>
+    <string name="log_in_whith_t_id">Войти с T-ID</string>
+    <string name="have_account">Есть аккаунт?</string>
+    <string name="do_auth">Войти</string>
+    <string name="do_register">Зарегистрироваться</string>
+    <string name="have_not_account">Нет аккаунта?</string>
+    <string name="home">Главная</string>
+    <string name="add_transaction">Добавить</string>
+    <string name="ai_assistant">Рекомендации</string>
+    <string name="settings">Профиль</string>
+</resources>

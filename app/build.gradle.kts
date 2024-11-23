@@ -35,6 +35,9 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -42,6 +45,10 @@ dependencies {
     implementation(project(":data"))
 
     implementation(libs.bundles.hilt)
+    implementation(libs.androidx.legacy.support.v4)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.fragment.ktx)
     ksp(libs.hilt.compiler)
 
     implementation(libs.bundles.glide)

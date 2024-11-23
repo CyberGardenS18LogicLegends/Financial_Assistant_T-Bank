@@ -46,7 +46,7 @@ dependencies {
 
     implementation(libs.bundles.coroutines)
 
-    implementation(libs.bundles.security)
+    implementation(libs.security.api)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".features.auth_and_reg.AuthenticateAndRegistrationFragment">
+
+    <LinearLayout
+        android:id="@+id/logo_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/t_bank_logo" />
+
+        <TextView
+            android:id="@+id/logo_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:text="@string/app_name_ru"
+            android:textAppearance="@style/TextAppearance.Comme.Bold.W600.Sp20" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/registration"
+        android:textAppearance="@style/TextAppearance.Monserrat.Medium.W500.Sp25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_layout" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginVertical="42dp"
+        android:ems="10"
+        android:orientation="horizontal"
+        app:boxBackgroundColor="@color/backgroundSecondary"
+        app:boxStrokeColor="@color/colorPrimary"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:shapeAppearanceOverlay="@style/TextInputLayoutRounded">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_login_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress"
+            android:maxLength="30"
+            android:hint="@string/login"
+            android:textColor="@color/textColorPrimary"
+            android:textAppearance="@style/TextAppearance.Monserrat.Medium.W500.Sp17" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_password_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginVertical="32dp"
+        android:ems="10"
+        android:orientation="horizontal"
+        app:boxBackgroundColor="@color/backgroundSecondary"
+        app:boxStrokeColor="@color/colorPrimary"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_input_layout"
+        app:shapeAppearanceOverlay="@style/TextInputLayoutRounded">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:hint="@string/password"
+            android:textColor="@color/textColorPrimary"
+            android:textAppearance="@style/TextAppearance.Monserrat.Medium.W500.Sp17" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/continue_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/main_yellow_btn_background"
+        android:padding="16dp"
+        android:text="@string/register"
+        android:textAppearance="@style/TextAppearance.Monserrat.SemiBold.W600.Sp17"
+        android:textColor="@color/textColorSecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_password_layout" />
+
+    <TextView
+        android:id="@+id/or_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:text="@string/or"
+        android:textAppearance="@style/TextAppearance.Monserrat.Medium.W500.Sp13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/continue_btn" />
+
+    <LinearLayout
+        android:id="@+id/t_id_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="32dp"
+        android:padding="19dp"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/secondary_btn_background"
+        app:layout_constraintTop_toBottomOf="@+id/or_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:text="@string/log_in_whith_t_id"
+            android:textAppearance="@style/TextAppearance.Monserrat.Medium.W500.Sp15"
+            android:layout_gravity="center"
+            app:drawableStartCompat="@drawable/t_bank_logo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/question_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/t_id_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/question_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/have_account"
+            android:textAppearance="@style/TextAppearance.Monserrat.SemiBold.W600.Sp15" />
+
+        <TextView
+            android:id="@+id/authenticate_or_register_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:clickable="true"
+            android:text="@string/do_auth"
+            android:textAppearance="@style/TextAppearance.Monserrat.SemiBold.W600.Sp15"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

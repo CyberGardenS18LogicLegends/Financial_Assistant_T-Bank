@@ -1,7 +1,7 @@
 [versions]
 agp = "8.5.2"
 kotlin = "1.9.0"
-coreKtx = "1.15.0"
+coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
@@ -17,12 +17,16 @@ retrofit = "2.11.0"
 retrofit-converter-gson = "2.9.0"
 kotlinx-coroutines = "1.8.1"
 kotlinx-serialization-json = "1.6.3"
-navigation = "2.8.1"
-navigationUiKtx = "2.8.1"
+navigation = "2.8.4"
+navigationUiKtx = "2.8.4"
 biometric = "1.2.0-alpha05"
 circularprogressbar = "3.1.0"
 securityCryptoKtx = "1.0.0"
-security = "1.1.0-alpha03"
+security = "1.1.0-alpha06"
+legacySupportV4 = "1.0.0"
+lifecycleLivedataKtx = "2.8.7"
+lifecycleViewmodelKtx = "2.8.7"
+fragmentKtx = "1.8.5"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -35,7 +39,6 @@ androidx-activity = { group = "androidx.activity", name = "activity", version.re
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 
 security-api = { group = "androidx.security", name = "security-crypto", version.ref = "security" }
-androidx-security-crypto-ktx = { group = "androidx.security", name = "security-crypto-ktx", version.ref = "securityCryptoKtx" }
 
 biometric = {group = "androidx.biometric", name = "biometric", version.ref = "biometric"}
 
@@ -65,6 +68,10 @@ kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 
 navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation" }
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
+androidx-legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportV4" }
+androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
+androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
+androidx-fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragmentKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -80,5 +87,4 @@ coroutines = ["kotlinx-coroutines-core", "kotlinx-coroutines-android"]
 hilt = ["hilt", "hilt-inject"]
 room = ["room-runtime", "room-ktx"]
 glide = ["glide", "glide-transformations"]
-security = ["security-api", "androidx-security-crypto-ktx"]
 
