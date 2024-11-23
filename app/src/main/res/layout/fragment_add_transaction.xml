@@ -1,13 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".features.add_transaction.AddTransactionFragment">
+    android:background="@color/backgroundColor"
+    android:paddingTop="20dp"
+    tools:context=".features.add_transaction.preview.AddTransactionFragment">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Выбирете время перевода"
+        android:textAppearance="@style/TextAppearance.Comme.Bold.W600.Sp20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/date_from_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Дата начала"
+        android:textColorHint="@color/textColorPrimary"
+        android:textAppearance="@style/TextAppearance.Comme.SemiBold.W600.Sp16"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_text" />
+
+    <EditText
+        android:id="@+id/date_to_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Дата окончания"
+        android:textColorHint="@color/textColorPrimary"
+        android:textAppearance="@style/TextAppearance.Comme.SemiBold.W600.Sp16"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_from_input" />
+
+    <RadioGroup
+        android:id="@+id/transaction_type_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_to_input">
+
+        <RadioButton
+            android:id="@+id/income_radio_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:gravity="center"
+            android:background="@drawable/radio_button_background"
+            android:textAppearance="@style/TextAppearance.Comme.Regular.W400.Sp16"
+            android:textColor="@drawable/radio_button_text"
+            android:text="Добавить доход" />
+
+        <RadioButton
+            android:id="@+id/expense_radio_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:button="@null"
+            android:gravity="center"
+            android:background="@drawable/radio_button_background"
+            android:textAppearance="@style/TextAppearance.Comme.Regular.W400.Sp16"
+            android:textColor="@drawable/radio_button_text"
+            android:text="Добавить расход"
+            android:checked="true"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/main_yellow_btn_background"
+        android:padding="4dp"
+        android:text="Добавить"
+        android:textAppearance="@style/TextAppearance.Comme.SemiBold.W600.Sp16"
+        android:textColor="@color/textColorSecondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

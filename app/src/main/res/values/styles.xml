@@ -8,32 +8,38 @@
 
     <!-- Monserrat.SemiBold -->
     <style name="TextAppearance.Monserrat.SemiBold.W600.Sp17" parent="">
+        <item name="android:font">@font/montserrat_semibold_600</item>
         <item name="android:textSize">17sp</item>
         <item name="android:textColor">@color/textColorSecondary</item>
     </style>
 
     <style name="TextAppearance.Monserrat.SemiBold.W600.Sp15" parent="">
+        <item name="android:font">@font/montserrat_semibold_600</item>
         <item name="android:textSize">15sp</item>
         <item name="android:textColor">@color/textColorPrimary</item>
     </style>
 
     <!-- Monserrat.Medium -->
     <style name="TextAppearance.Monserrat.Medium.W500.Sp25" parent="">
+        <item name="android:font">@font/montserrat_medium_500</item>
         <item name="android:textSize">25sp</item>
         <item name="android:textColor">@color/textColorPrimary</item>
     </style>
 
     <style name="TextAppearance.Monserrat.Medium.W500.Sp17" parent="">
+        <item name="android:font">@font/montserrat_medium_500</item>
         <item name="android:textSize">17sp</item>
         <item name="android:textColor">@color/textColorPrimary</item>
     </style>
 
     <style name="TextAppearance.Monserrat.Medium.W500.Sp15" parent="">
+        <item name="android:font">@font/montserrat_medium_500</item>
         <item name="android:textSize">15sp</item>
         <item name="android:textColor">@color/textColorPrimary</item>
     </style>
 
     <style name="TextAppearance.Monserrat.Medium.W500.Sp13" parent="">
+        <item name="android:font">@font/montserrat_medium_500</item>
         <item name="android:textSize">13sp</item>
         <item name="android:textColor">@color/textColorHint</item>
     </style>
@@ -44,14 +50,62 @@
 
     <!-- Comme.Bold -->
     <style name="TextAppearance.Comme.Bold.W600.Sp20" parent="">
+        <item name="android:font">@font/comme_bold_700</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textColor">@color/textColorPrimary</item>
     </style>
+
+    <!-- Comme.SemiBold -->
+    <style name="TextAppearance.Comme.SemiBold.W600.Sp20" parent="">
+        <item name="android:font">@font/comme_semibold_600</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Comme.SemiBold.W600.Sp16" parent="">
+        <item name="android:font">@font/comme_semibold_600</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+
+
+    <!-- Comme.Medium -->
+    <style name="TextAppearance.Comme.Medium.W500.Sp14" parent="">
+        <item name="android:font">@font/comme_medium_500</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+
+    <!-- Comme.Light -->
+    <style name="TextAppearance.Comme.Light.W300.Sp12" parent="">
+        <item name="android:font">@font/comme_light_300</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+
+    <!-- Comme.Regular -->
+    <style name="TextAppearance.Comme.Regular.W400.Sp16" parent="">
+        <item name="android:font">@font/comme_regular_400</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
 
     <!-- InputLayoutStyles -->
     <style name="TextInputLayoutRounded" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">10dp</item>
+    </style>
+
+
+    <!-- BottomNavigationView -->
+    <style name="CustomBottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">@color/backgroundColor</item>
+        <item name="itemBackground">@drawable/bottom_navigation_item_background</item>
+        <item name="itemIconSize">24dp</item>
     </style>
 
 </resources>

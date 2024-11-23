@@ -7,5 +7,5 @@ import dagger.hilt.components.SingletonComponent
 
 object ApiConstants {
 
-    const val BASE_URL = "http://95.174.101.144:8079/api/"
+    const val BASE_URL = "https://cg-api.ffokildam.ru:8443/api/"
 }

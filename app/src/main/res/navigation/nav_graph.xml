@@ -26,4 +26,32 @@
         android:name="com.t_bank.financial_assistant.features.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/addTransactionFragment"
+        android:name="com.t_bank.financial_assistant.features.add_transaction.preview.AddTransactionFragment"
+        android:label="fragment_add_transaction"
+        tools:layout="@layout/fragment_add_transaction" >
+        <action
+            android:id="@+id/action_addTransactionFragment_to_addBlankFragment"
+            app:destination="@id/addBlankFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/aiAssistantFragment"
+        android:name="com.t_bank.financial_assistant.features.assistant_chat.AiAssistantFragment"
+        android:label="fragment_ai_assistant"
+        tools:layout="@layout/fragment_ai_assistant" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.t_bank.financial_assistant.features.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/addBlankFragment"
+        android:name="com.t_bank.financial_assistant.features.add_transaction.adding_screen.AddBlankFragment"
+        android:label="fragment_add_blank"
+        tools:layout="@layout/fragment_add_blank" />
 </navigation>

@@ -5,18 +5,181 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundColor"
+    android:paddingTop="20dp"
     tools:context=".features.home.HomeFragment">
 
 
     <TextView
+        android:id="@+id/time_title_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ijvfosfvszfvsdzvsdzdfviv"
+        android:layout_margin="16dp"
+        android:text="За текущий месяц"
+        android:textAppearance="@style/TextAppearance.Comme.Bold.W600.Sp20"
         android:textColor="@color/textColorPrimary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/amounts_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/time_title_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:background="@drawable/secondary_btn_background"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Расходы"
+                android:textAppearance="@style/TextAppearance.Comme.Bold.W600.Sp20"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/amount_expenses_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:text="1000"
+                android:textAppearance="@style/TextAppearance.Comme.Medium.W500.Sp14" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar_expenses"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:max="100"
+                android:progress="0" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="@drawable/secondary_btn_background"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Доходы"
+                android:textAppearance="@style/TextAppearance.Comme.Bold.W600.Sp20"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/amount_income_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:text="1000"
+                android:textAppearance="@style/TextAppearance.Comme.Medium.W500.Sp14" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar_income"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:max="100"
+                android:progress="0" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/expenses_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Расходы"
+        android:textAppearance="@style/TextAppearance.Comme.SemiBold.W600.Sp20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amounts_layout" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/expenses_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="horizontal"
+        tools:listitem="@layout/item_transaction"
+        tools:itemCount="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expenses_title_text" />
+
+    <TextView
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/main_yellow_btn_background"
+        android:padding="4dp"
+        android:clickable="true"
+        android:text="Добавить Расход"
+        android:textAppearance="@style/TextAppearance.Comme.SemiBold.W600.Sp16"
+        android:textSize="12sp"
+        android:textColor="@color/textColorSecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expenses_recycler_view" />
+
+
+    <TextView
+        android:id="@+id/income_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Доходы"
+        android:textAppearance="@style/TextAppearance.Comme.SemiBold.W600.Sp20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/income_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="horizontal"
+        tools:listitem="@layout/item_transaction"
+        tools:itemCount="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/income_title_text" />
+
+    <TextView
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/main_yellow_btn_background"
+        android:padding="4dp"
+        android:text="Добавить Доход"
+        android:textAppearance="@style/TextAppearance.Comme.SemiBold.W600.Sp16"
+        android:textSize="12sp"
+        android:textColor="@color/textColorSecondary"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/income_recycler_view" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

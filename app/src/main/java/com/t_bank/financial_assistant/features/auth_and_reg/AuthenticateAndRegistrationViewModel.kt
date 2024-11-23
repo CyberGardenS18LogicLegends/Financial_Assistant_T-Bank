@@ -1,5 +1,6 @@
 package com.t_bank.financial_assistant.features.auth_and_reg
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.t_bank.common_models.UserDataClass
@@ -22,7 +23,7 @@ class AuthenticateAndRegistrationViewModel @Inject constructor(
     private val registrationAPI: RegistrationAPI
 ) : ViewModel() {
 
-    private val _authenticationMode = MutableStateFlow(AuthenticationMode.REGISTRATION)
+    private val _authenticationMode = MutableStateFlow(AuthenticationMode.AUTHENTICATION)
     val authenticationMode: StateFlow<AuthenticationMode> get() = _authenticationMode
 
     private val _userData = MutableStateFlow(sharedPreferenceManager.getUserData())
@@ -61,6 +62,7 @@ class AuthenticateAndRegistrationViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val result = authenticationAPI.authenticate(userData)
+                Log.d("AuthenticateAndRegistrationViewModel", "result: ${result.toString()}")
                 _authResult.emit(Result.success(result))
                 sharedPreferenceManager.saveAuthData(result)
             } catch (e: Exception) {
