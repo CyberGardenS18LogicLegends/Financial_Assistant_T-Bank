@@ -68,6 +68,12 @@
         <item name="android:textColor">@color/textColorPrimary</item>
     </style>
 
+    <style name="TextAppearance.Comme.SemiBold.W600.Sp14" parent="">
+        <item name="android:font">@font/comme_semibold_600</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
 
 
     <!-- Comme.Medium -->

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:paddingTop="20dp"
+    tools:context=".features.add_transaction.AddPageFragment">
+
+    <TextView
+        android:id="@+id/add_transaction_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="add transaction"
+        android:textAppearance="@style/TextAppearance.Comme.Bold.W600.Sp20"
+        android:textColor="@color/textColorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/calendar_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:clickable="true"
+        android:src="@drawable/ic_calendar"
+        app:layout_constraintBottom_toBottomOf="@+id/add_transaction_title_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/add_transaction_title_text" />
+
+    <TextView
+        android:id="@+id/date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:textAppearance="@style/TextAppearance.Comme.Medium.W500.Sp14"
+        app:layout_constraintBottom_toBottomOf="@+id/add_transaction_title_text"
+        app:layout_constraintEnd_toStartOf="@+id/calendar_btn"
+        app:layout_constraintTop_toTopOf="@+id/add_transaction_title_text" />
+
+    <TextView
+        android:id="@+id/income_or_expense_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/TextAppearance.Comme.SemiBold.W600.Sp16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_transaction_title_text" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/income_or_expense_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginVertical="16dp"
+        android:ems="10"
+        android:orientation="horizontal"
+        app:boxBackgroundColor="@color/backgroundSecondary"
+        app:boxStrokeColor="@color/colorPrimary"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/colorPrimary"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/income_or_expense_text"
+        app:shapeAppearanceOverlay="@style/TextInputLayoutRounded">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_income_or_expense_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textShortMessage"
+            android:maxLength="40"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.Monserrat.Medium.W500.Sp17"
+            android:textColor="@color/textColorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/category_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Название категории"
+        android:textAppearance="@style/TextAppearance.Comme.SemiBold.W600.Sp16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/income_or_expense_input_layout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/category_name_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginVertical="16dp"
+        android:ems="10"
+        android:orientation="horizontal"
+        app:boxBackgroundColor="@color/backgroundSecondary"
+        app:boxStrokeColor="@color/colorPrimary"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/colorPrimary"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category_name_text"
+        app:shapeAppearanceOverlay="@style/TextInputLayoutRounded">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_category_name_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textShortMessage"
+            android:maxLength="40"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.Monserrat.Medium.W500.Sp17"
+            android:textColor="@color/textColorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/amount_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Сумма"
+        android:textAppearance="@style/TextAppearance.Comme.SemiBold.W600.Sp16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category_name_input_layout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/amount_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginVertical="16dp"
+        android:ems="10"
+        android:orientation="horizontal"
+        app:boxBackgroundColor="@color/backgroundSecondary"
+        app:boxStrokeColor="@color/colorPrimary"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/colorPrimary"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amount_text"
+        app:shapeAppearanceOverlay="@style/TextInputLayoutRounded">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_amount_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="numberDecimal"
+            android:maxLength="40"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.Monserrat.Medium.W500.Sp17"
+            android:textColor="@color/textColorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/comment_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Комментарий"
+        android:textAppearance="@style/TextAppearance.Comme.SemiBold.W600.Sp16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amount_input_layout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/comment_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginVertical="16dp"
+        android:ems="10"
+        android:orientation="horizontal"
+        app:boxBackgroundColor="@color/backgroundSecondary"
+        app:boxStrokeColor="@color/colorPrimary"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/colorPrimary"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comment_text"
+        app:shapeAppearanceOverlay="@style/TextInputLayoutRounded">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_comment_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:maxLength="70"
+            android:textAppearance="@style/TextAppearance.Monserrat.Medium.W500.Sp17"
+            android:textColor="@color/textColorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/main_yellow_btn_background"
+        android:enabled="false"
+        android:padding="4dp"
+        android:text="Добавить"
+        android:textAppearance="@style/TextAppearance.Comme.SemiBold.W600.Sp16"
+        android:textColor="@drawable/radio_button_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

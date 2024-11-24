@@ -13,4 +13,14 @@
         <!--<item name="windowSplashScreenAnimationDuration">1000</item>-->
         <item name="postSplashScreenTheme">@style/Theme.FinancialAssistantTBank</item>
     </style>
+
+    <!-- Custom Date Picker Theme -->
+    <style name="CustomDatePickerTheme" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorSecondary">@color/backgroundSecondary</item>
+        <item name="colorSecondaryVariant">@color/backgroundSecondary</item>
+        <item name="colorPrimaryDark">@color/backgroundSecondary</item>
+        <item name="colorAccent">@color/backgroundSecondary</item>
+        <item name="android:windowBackground">@color/backgroundSecondary</item>
+    </style>
 </resources>

@@ -2,6 +2,7 @@ package com.t_bank.local.room.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.t_bank.data.R
 import java.util.*
 
 @Entity(tableName = "transactions")

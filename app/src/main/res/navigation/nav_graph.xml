@@ -25,7 +25,15 @@
         android:id="@+id/homeFragment"
         android:name="com.t_bank.financial_assistant.features.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_addPageFragment"
+            app:destination="@id/addPageFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
     <fragment
         android:id="@+id/addTransactionFragment"
         android:name="com.t_bank.financial_assistant.features.add_transaction.preview.AddTransactionFragment"
@@ -53,5 +61,18 @@
         android:id="@+id/addBlankFragment"
         android:name="com.t_bank.financial_assistant.features.add_transaction.adding_screen.AddBlankFragment"
         android:label="fragment_add_blank"
-        tools:layout="@layout/fragment_add_blank" />
+        tools:layout="@layout/fragment_add_blank" >
+        <action
+            android:id="@+id/action_addBlankFragment_to_addPageFragment"
+            app:destination="@id/addPageFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/addPageFragment"
+        android:name="com.t_bank.financial_assistant.features.add_transaction.AddPageFragment"
+        android:label="fragment_add_page"
+        tools:layout="@layout/fragment_add_page" />
 </navigation>
